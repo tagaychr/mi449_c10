@@ -1,11 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("cityForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
 
-document.getElementById("cityForm").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+        var city = document.getElementById("cityInput").value;
 
-    var city = document.getElementById("cityInput").value;
-
-    generateWeather(city);
-    generateMap(city);
+        generateWeather(city);
+        generateMap(city);
+    });
 });
 
 function generateWeather(city) {
@@ -30,7 +31,7 @@ function generateWeather(city) {
             document.getElementById('weather').innerHTML = `<p>Error fetching weather data for ${city}.</p>`;
         });
 }
-document.addEventListener('DOMContentLoaded', function() {
+
 function generateMap(city){
     console.log(city);
     //https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4
@@ -47,4 +48,3 @@ function generateMap(city){
         console.error("Map div not found.");
     }
 }
-});
