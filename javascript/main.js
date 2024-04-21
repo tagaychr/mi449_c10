@@ -32,4 +32,15 @@ function generateWeather(city) {
 }
 function generateMap(city){
     console.log(city);
+    //https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4
+    const apiUrl = `https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4`;
+
+    // Create an <img> element
+    const img = document.createElement('img');
+
+    // Set the src attribute of the <img> element to the API URL
+    img.src = apiUrl;
+
+    // Append the <img> element to the map <div>
+    document.getElementById('map').appendChild(img);
 }
