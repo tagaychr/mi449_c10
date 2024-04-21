@@ -1,6 +1,6 @@
 
 document.getElementById("cityForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
+    //event.preventDefault(); // Prevent the form from submitting traditionally
 
     // Get the value of the input field
     var city = document.getElementById("cityInput").value;
