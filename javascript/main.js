@@ -35,7 +35,8 @@ function generateWeather(city) {
 function generateMap(city){
     console.log(city);
     //https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4
-    const apiUrl = `https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4`;
+    //https://api.tomtom.com/map/1/tile/basic/main/10/512/512.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4
+    const apiUrl = `https://api.tomtom.com/map/1/tile/basic/main/10/512/512.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4`;
 
     const img = document.createElement('img');
 
