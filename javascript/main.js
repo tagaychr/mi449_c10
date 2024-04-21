@@ -9,7 +9,7 @@ document.getElementById("cityForm").addEventListener("submit", function(event) {
 });
 
 function generateWeather(city) {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=4ce8c6132c41460caf945817242104&q=${city}&aqi=no`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=4ce8c6132c41460caf945817242104&q=${city}&aqi=no`)
         .then(response => response.json())
         .then(data => {
 
