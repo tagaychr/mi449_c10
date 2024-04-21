@@ -30,17 +30,21 @@ function generateWeather(city) {
             document.getElementById('weather').innerHTML = `<p>Error fetching weather data for ${city}.</p>`;
         });
 }
+document.addEventListener('DOMContentLoaded', function() {
 function generateMap(city){
     console.log(city);
     //https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4
     const apiUrl = `https://api.tomtom.com/map/1/tile/basic/main/10/130/450/.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4`;
 
-    // Create an <img> element
     const img = document.createElement('img');
 
-    // Set the src attribute of the <img> element to the API URL
     img.src = apiUrl;
 
-    // Append the <img> element to the map <div>
-    document.getElementById('map').appendChild(img);
+    const mapDiv = document.getElementById('map');
+    if (mapDiv) {
+        mapDiv.appendChild(img);
+    } else {
+        console.error("Map div not found.");
+    }
 }
+});
