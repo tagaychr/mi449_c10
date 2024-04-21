@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var city = document.getElementById("cityInput").value;
 
         generateWeather(city);
-        generateMap(city);
+        //generateMap(city);
     });
 });
 
