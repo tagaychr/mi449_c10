@@ -88,7 +88,7 @@ function generateWeather(city) {
 
             document.getElementById('weather').innerHTML = weatherHTML;
 
-            const xyz = latLonToTileZXY(lat, lon, 5);
+            const xyz = latLonToTileZXY(lat, lon, 15);
 
             const apiUrl = `https://api.tomtom.com/map/1/tile/basic/night/${xyz}.png?key=jVzPLfJYABiemFUjBRts5PqLY9VKWMr4`;
 
