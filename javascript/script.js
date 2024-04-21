@@ -1,6 +1,6 @@
 
 document.getElementById("cityForm").addEventListener("submit", function(event) {
-    //event.preventDefault(); 
+    event.preventDefault(); 
 
     var city = document.getElementById("cityInput").value;
 
